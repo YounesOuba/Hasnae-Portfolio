@@ -1,62 +1,46 @@
-// import logo from './logo.svg';
-// import './App.css';
+import './index.css';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-// export default App;
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Resume from "./pages/Resume";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
+import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import Navbar from "./hasnae-portfolio/navbar";
-// import VideoBackground from "./hasnae-portfolio/VideoBg";
-import Home from "./hasnae-portfolio/home";
-import About from "./hasnae-portfolio/about";
-import Projects from "./hasnae-portfolio/project";
-import Resume from "./hasnae-portfolio/resume";
-import Contact from "./hasnae-portfolio/conatct";
-import Footer from "./hasnae-portfolio/footer";
+export default function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
-
-export default function HasnaePortfolio() {
-  return(
-
+  return (
     <>
       <Navbar />
-      {/* <VideoBackground /> */}
-      <section id="home">
-        <Home />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="resume">
-        <Resume />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
-      <Footer />
+      <main>
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="resume">
+          <Resume />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+
+        <Footer />
+       
+      </main>
     </>
-  )
+  );
 }
