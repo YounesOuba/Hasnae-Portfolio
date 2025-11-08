@@ -19,7 +19,6 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import Portfoilo from './myPortfolio/main';
 import { BrowserRouter } from "react-router-dom";
 import HasnaePortfolio from './App';
 

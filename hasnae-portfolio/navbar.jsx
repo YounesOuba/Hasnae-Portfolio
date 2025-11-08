@@ -26,11 +26,11 @@ export default function Navbar() {
     { title: "About", href: "about", scroll: true }, 
     { title: "Projects", href: "project", scroll: true },
     { title: "Resume", href: "resume", scroll: true },
-    { title: "Contact", href: "contact" },
+    { title: "Contact", href: "contact", scroll: true },
   ];
 
   return (
-    <header className="text-sm py-6 md:px-16 px-6 border-b border-zinc-200 dark:border-zinc-800 z-30 md:mb-28 mb-10">
+  <header className="sticky top-0 bg-white/30 dark:bg-zinc-900/90 backdrop-blur-lg text-sm py-6 md:px-16 px-6 border-b border-zinc-200 dark:border-zinc-800 z-30">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <img
